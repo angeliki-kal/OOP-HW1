@@ -10,7 +10,7 @@ _DEPS = Forum.hpp Thread.hpp Post.hpp
 #pattern matching from  _DEPS to include directory
 DEPS = $(patsubst %,$(INCLUDE_DIR)/%,$(_DEPS))
 
-_OBJ = main.o Forum.o Thread.o
+_OBJ = main.o Forum.o Thread.o Post.o
 #same pattern matching principe
 OBJ = $(patsubst %,$(OBJECT_DIR)/%,$(_OBJ))
 

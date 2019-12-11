@@ -5,10 +5,13 @@
 #include <string>
 
 class Post {
+  static int counter;
   int id;
-  std::string title, writer, date_posted;
+  std::string title, creator, date, text;
  public:
-
+   Post(std::string title, std::string creator, std::string date, std::string text);
+   ~Post();
+   int getId();
 };
 
 #endif

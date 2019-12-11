@@ -7,7 +7,7 @@ Thread::Thread(string s, string c, string d):subject(s), creator(c), date(d) {
 }
 
 Thread::~Thread() {
-  cout << "Thread with subject:" << subject << " is about to be destroyed\n";
+  cout << "Thread with subject: " << subject << " is about to be destroyed\n";
 }
 
 std::string Thread::getSubject() {
