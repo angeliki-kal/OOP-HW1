@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
 
 class Post {
   static int counter;
@@ -13,5 +14,8 @@ class Post {
    ~Post();
    int getId();
 };
+
+void readRandomTextFile(std::string path);
+std::string getRandomText();
 
 #endif

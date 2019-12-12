@@ -6,14 +6,14 @@
 using namespace std;
 
 Forum::Forum(std::string t):title(t) {
-  cout << "Forum with title: " << title << " has just been created\n";
+  cout << "Forum with title: " << title << " has just been created\n\n";
 }
 
 Forum::~Forum() {
   for(auto t: threads) {
     delete t;
   }
-  cout << "Forum with title: " << title << " is about to be destroyed\n";
+  cout << "Forum with title: " << title << " is about to be destroyed\n\n";
 }
 
 void Forum::addThread(Thread* t) {

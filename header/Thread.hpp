@@ -12,6 +12,7 @@ class Thread {
     Thread(std::string subject, std::string creator, std::string date);
     ~Thread();
     std::string getSubject();
+    void addPost(Post*);
 };
 
 #endif
