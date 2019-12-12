@@ -2,17 +2,20 @@
 #define THREAD_HPP
 
 #include <string>
-#include <vector>
+#include <map>
 #include "Post.hpp"
 
 class Thread {
-    std::string subject, creator, date; //todo Date as clas
-    std::vector<Post*> posts;
+    std::string subject, creator;
+    Date date;
+    std::map<int,Post*> posts;
   public:
     Thread(std::string subject, std::string creator, std::string date);
     ~Thread();
-    std::string getSubject();
+    std::string getSubject() const;
     void addPost(Post*);
+    Post* getPost(int id);
+    void print();
 };
 
 #endif

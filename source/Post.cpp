@@ -4,6 +4,7 @@
 #include <fstream>
 
 #include "Post.hpp"
+
 using namespace std;
 
 int Post::counter = 0;
@@ -11,15 +12,19 @@ vector<string> g_rand_text_lines;
 
 Post::Post(std:: string t, std:: string c, std:: string d, std:: string te)
 :id(++counter), title(t), creator(c), date(d), text(te) {
-  cout << id << " " << t << " " << c << " " << d << "\ntext: \"" << te << "\"\n\n";
+  cout << "\nPost created:\n"<< id << " " << title << " " << creator << " " << date.to_string() << "\ntext: \"" << text << "\"\n";
 }
 
 Post::~Post() {
-  cout << "Post number " << id << " is about to be destroyed\n\n";
+  cout << "\nPost number " << id << " is about to be destroyed\n";
 }
 
 int Post::getId() {
   return id;
+}
+
+void Post::print() {
+  cout << "\nPost:\n" << id << " " << title << " " << creator << " " << date.to_string() << "\ntext: \"" << text << "\"\n";
 }
 
 //load random text file to memory, in a vector<string>
@@ -48,4 +53,8 @@ void readRandomTextFile(std::string path) {
 //get a random line for post text
 std::string getRandomText() {
   return g_rand_text_lines[rand() % g_rand_text_lines.size()];
+}
+
+std::string Post::getTitle() {
+  return title;
 }
